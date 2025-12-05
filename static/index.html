@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Churn Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Customer Churn Prediction</h1>
+        <form id="churn-form">
+            <div class="form-row">
+                <label>Credit Score</label>
+                <input type="number" id="CreditScore" required>
+            </div>
+
+            <div class="form-row">
+                <label>Geography</label>
+                <select id="Geography" required>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Spain">Spain</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>Gender</label>
+                <select id="Gender" required>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>Age</label>
+                <input type="number" id="Age" required>
+            </div>
+
+            <div class="form-row">
+                <label>Tenure</label>
+                <input type="number" id="Tenure" required>
+            </div>
+
+            <div class="form-row">
+                <label>Balance</label>
+                <input type="number" id="Balance" step="0.01" required>
+            </div>
+
+            <div class="form-row">
+                <label>Number of Products</label>
+                <input type="number" id="NumOfProducts" required>
+            </div>
+
+            <div class="form-row">
+                <label>Has Credit Card</label>
+                <select id="HasCrCard" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>Is Active Member</label>
+                <select id="IsActiveMember" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>Estimated Salary</label>
+                <input type="number" id="EstimatedSalary" step="0.01" required>
+            </div>
+
+            <button type="submit" id="predict-btn">Predict Churn</button>
+        </form>
+
+        <div id="result" class="result-box">
+            <!-- Prediction result will appear here -->
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
